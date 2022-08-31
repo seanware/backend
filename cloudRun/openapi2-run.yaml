@@ -1,0 +1,26 @@
+# openapi2-run.yaml
+swagger: '2.0'
+x-google-endpoints:
+- name: "visitor-api.endpoints.resume-visitor-api-359109.cloud.goog"
+  allowCors: True
+info:
+  title: API_ID optional-string
+  description: Sample API on API Gateway with a Cloud Run backend
+  version: 1.0.0
+schemes:
+- https
+produces:
+- application/json
+x-google-backend:
+  address: https://cloudrun-5p5mufvsyq-uc.a.run.app
+paths:  
+  /fetch:
+    get:
+      summary: Fetch the count from the Cloud run api
+      operationId: Fetch
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
+  
